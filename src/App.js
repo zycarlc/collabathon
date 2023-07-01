@@ -1,9 +1,10 @@
 import "./App.css"
+import FullScreenHeader from "./components/themes/Header"
 
 function App() {
     return (
         <div className="App">
-            <h1>hello</h1>
+            <FullScreenHeader></FullScreenHeader>
         </div>
     )
 }
