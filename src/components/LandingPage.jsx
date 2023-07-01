@@ -7,8 +7,8 @@ export default function LandingPage() {
                 your online presence with captivating digital experiences, at
                 Design Hive.
             </p>
-            <button className="workwithus">Work With Us</button>
-            <button className="contactus">Contact Us</button>
+            <button className="workwithus fw-bold">Work With Us</button>
+            <button className="contactus fw-bold">Contact Us</button>
         </div>
     )
 }

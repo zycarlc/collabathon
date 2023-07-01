@@ -12,25 +12,25 @@ h3 {
     display: block;
     margin: 0 auto;
     margin-top: 20%;
-    width: 50vw;
+    width: 80vw;
     max-width: 300px;
-    height: 40px;
+    height: 60px;
     background: #bfcc2b;
-    border-radius: 20px;
+    border-radius: 30px;
     border-color: #bfcc2b;
     border-width: 0;
-    color: white;
+    color: black;
 }
 
 .contactus {
     display: block;
     margin: 0 auto;
     margin-top: 20px;
-    width: 50vw;
+    width: 80vw;
     max-width: 300px;
-    height: 40px;
+    height: 60px;
     background: black;
-    border-radius: 20px;
+    border-radius: 30px;
     border-color: #02aab0;
     border-width: 2px;
     border-style: solid;
@@ -38,21 +38,62 @@ h3 {
 }
 
 .landing-page {
+    padding: 0 5%;
     padding-top: 20%;
+    padding-bottom: 20%;
     text-align: center;
     background-color: #000;
     color: rgb(255, 255, 255);
-    height: 70vh;
-}
-
-.result-numbers {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    min-width: 300px;
 }
 
 .number {
-    text-align: center;
-    border: 1px solid #7b61ff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 25px;
+    border: 3px solid #7b61ff;
     border-radius: 30px;
+    height: 150px;
+    color: #7b61ff;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+.result {
+    padding: 0 5%;
+    padding-top: 100px;
+}
+
+.monitor img {
+    width: 100vw;
+}
+
+.monitor-lg img {
+    width: 100%;
+}
+
+.all-services-btn {
+    display: block;
+    margin: 0 auto;
+    width: 80vw;
+    max-width: 300px;
+    height: 60px;
+    background: #bfcc2b;
+    border-radius: 30px;
+    border-color: #bfcc2b;
+    border-width: 0;
+    color: black;
+}
+
+.how-we-help {
+    background: #7b61ff;
+    color: #fff;
+    padding: 0 5%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.our-work {
+    padding: 0 5%;
+    padding-top: 70px;
+    background-color: #f1f1f1;
 }
