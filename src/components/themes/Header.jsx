@@ -141,8 +141,8 @@ function ResponsiveAppBar() {
                             }}
                         >
                             <svg
-                                width="175"
-                                height="22"
+                                width="120"
+                                height="14"
                                 viewBox="0 0 700 91"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"

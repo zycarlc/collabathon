@@ -1,9 +1,12 @@
 import * as React from "react"
+import LandingPage from "../components/LandingPage"
+import Result from "../components/Result"
 
 export default function Homepage() {
     return (
-        <div style={{ margin: "100px" }}>
-            <h1>this is homepage</h1>
-        </div>
+        <>
+            <LandingPage></LandingPage>
+            <Result></Result>
+        </>
     )
 }
