@@ -198,7 +198,7 @@ function ResponsiveAppBar() {
                         {pages.map(page => {
                             let [name, route] = page
                             return (
-                                <Link to={route}>
+                                <Link to={route} key={name}>
                                     <Button
                                         key={name}
                                         onClick={handleCloseNavMenu}

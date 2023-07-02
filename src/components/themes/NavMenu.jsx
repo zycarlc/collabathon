@@ -15,7 +15,7 @@ export default function NavMenu({ setIsNavModalClose }) {
             style={{
                 backgroundColor: "black",
                 color: "white",
-                height: "70vh",
+                height: "100vh",
             }}
         >
             <div className="d-flex flex-column h-100 align-items-center justify-content-center">

@@ -3,6 +3,8 @@ import LandingPage from "../components/LandingPage"
 import Result from "../components/Result"
 import HowWeHelp from "../components/HowWeHelp"
 import OurWork from "../components/OurWork"
+import WeWorkedWith from "../components/WeWorkedWith"
+import Contact from "../components/Contact"
 
 export default function Homepage() {
     return (
@@ -11,6 +13,8 @@ export default function Homepage() {
             <Result></Result>
             <HowWeHelp></HowWeHelp>
             <OurWork></OurWork>
+            <WeWorkedWith></WeWorkedWith>
+            <Contact></Contact>
         </>
     )
 }

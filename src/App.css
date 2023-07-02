@@ -39,7 +39,7 @@ h3 {
 
 .landing-page {
     padding: 0 5%;
-    padding-top: 20%;
+    padding-top: 40%;
     padding-bottom: 20%;
     text-align: center;
     background-color: #000;
@@ -96,8 +96,62 @@ h3 {
     padding: 0 5%;
     padding-top: 70px;
     background-color: #f1f1f1;
+    padding-bottom: 40px;
 }
 
 a {
     text-decoration: none;
+}
+
+button.nav-filter {
+    height: 50px;
+    border: 2px solid #7b61ff;
+    border-radius: 25px;
+    background-color: #fff;
+    font-size: small;
+    font-weight: 600;
+}
+
+button.active {
+    background-color: #7b61ff;
+    color: #fff;
+}
+
+.project-page {
+    min-height: 50vh;
+    margin-bottom: 20px;
+}
+
+.violet {
+    background-color: #7b61ff;
+}
+
+.yellow {
+    background-color: #f4e64d;
+}
+
+.mint {
+    background-color: #00cdac;
+}
+
+.lemon {
+    background-color: #bfcc2b;
+}
+
+.contact {
+    background-color: #7b61ff;
+}
+
+button.contact {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 80vw;
+    max-width: 300px;
+    height: 60px;
+    background: #02aab0;
+    border-radius: 30px;
+    border-color: #bfcc2b;
+    border-width: 0;
+    color: black;
 }

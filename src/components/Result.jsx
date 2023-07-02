@@ -5,14 +5,19 @@ export default function Result() {
         <>
             <div className="result">
                 <div className="result-numbers">
-                    <Box sx={{ display: { xs: "block", sm: "none" }, mr: 1 }}>
+                    <Box
+                        sx={{
+                            display: { xs: "block", sm: "none" },
+                            mr: 1,
+                        }}
+                    >
                         <h2>Need to bring a product to life?</h2>
                         <h6 style={{ margin: "20px 0" }}>
                             We can help. Our all-inclusive and strategic
                             approach help businesses grow. Businesses that
                             embrace our design generate on average:
                         </h6>
-                        <div className="d-flex">
+                        <div className="d-flex justify-content-center">
                             <div className="">
                                 <div className="number">
                                     <h2 style={{ fontSize: "50px" }}>32%</h2>
