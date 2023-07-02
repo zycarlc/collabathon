@@ -8,9 +8,14 @@ import Container from "@mui/material/Container"
 import Button from "@mui/material/Button"
 import CloseIcon from "@mui/icons-material/Close"
 import NavMenu from "./NavMenu"
+import { Link } from "react-router-dom"
 
 function ResponsiveAppBar() {
-    const pages = ["About Us", "Our Projects", "Contact Us"]
+    const pages = [
+        ["About Us", "/"],
+        ["Our Projects", "/projects"],
+        ["Contact Us", "/"],
+    ]
 
     const [anchorElNav, setAnchorElNav] = React.useState(null)
 
@@ -190,19 +195,24 @@ function ResponsiveAppBar() {
                             display: { xs: "none", md: "flex" },
                         }}
                     >
-                        {pages.map(page => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{
-                                    my: 2,
-                                    color: "white",
-                                    display: "block",
-                                }}
-                            >
-                                {page}
-                            </Button>
-                        ))}
+                        {pages.map(page => {
+                            let [name, route] = page
+                            return (
+                                <Link to={route}>
+                                    <Button
+                                        key={name}
+                                        onClick={handleCloseNavMenu}
+                                        sx={{
+                                            my: 2,
+                                            color: "white",
+                                            display: "block",
+                                        }}
+                                    >
+                                        {name}
+                                    </Button>
+                                </Link>
+                            )
+                        })}
                     </Box>
                     <Box
                         sx={{

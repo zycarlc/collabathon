@@ -1,7 +1,14 @@
 import Typography from "@mui/material/Typography"
+import { Link } from "react-router-dom"
 
 export default function NavMenu({ setIsNavModalClose }) {
-    const pages = ["Home", "Our Work", "Services", "About Us", "Contact Us"]
+    const pages = [
+        ["Home", "/"],
+        ["Our Work", "/projects"],
+        ["Services", "/"],
+        ["About Us", "/"],
+        ["Contact Us", "/"],
+    ]
 
     return (
         <div
@@ -22,21 +29,25 @@ export default function NavMenu({ setIsNavModalClose }) {
                         paddingTop: "30px",
                     }}
                 >
-                    {pages.map((page, i) => {
+                    {pages.map(([name, route], i) => {
                         return (
                             <li className="nav-item">
-                                <Typography
-                                    className="nav-link"
-                                    style={{ cursor: "pointer" }}
-                                    id={i}
-                                    to="home"
-                                    onClick={e => {
-                                        e.preventDefault()
-                                        setIsNavModalClose(true)
-                                    }}
-                                >
-                                    {page}
-                                </Typography>
+                                <Link to={route}>
+                                    <Typography
+                                        className="nav-link"
+                                        style={{
+                                            cursor: "pointer",
+                                            color: "white",
+                                        }}
+                                        id={i}
+                                        to="home"
+                                        onClick={e => {
+                                            setIsNavModalClose(true)
+                                        }}
+                                    >
+                                        {name}
+                                    </Typography>
+                                </Link>
                             </li>
                         )
                     })}
