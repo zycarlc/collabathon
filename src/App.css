@@ -155,3 +155,15 @@ button.contact {
     border-width: 0;
     color: black;
 }
+
+.how-it-works {
+    background-color: #080b1a;
+}
+
+.slick-dots li button:before {
+    color: #f1f1f1;
+}
+.slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    color: #f1f1f1;
+}
