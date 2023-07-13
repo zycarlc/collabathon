@@ -162,7 +162,7 @@ export default function Projects() {
             <div className="landing-page">
                 <div className="container">
                     <div className="row align-items-end">
-                        <div className="col-12 col-md-6 text-md-start">
+                        <div className="col-12 col-md-6 text-start p-4">
                             <h1>Our Work</h1>
                             <p style={{ marginTop: "16px" }}>
                                 We've collaborated with amazing clients across
@@ -172,12 +172,13 @@ export default function Projects() {
                                 create something extraordinary together.
                             </p>
                             <Scroll to="contactus" offset={-50}>
-                                <button className="project-contact fw-bold mx-auto mx-sm-0">
+                                <button className="project-contact fw-bold mx-0">
                                     Contact Us
                                 </button>
                             </Scroll>
                         </div>
                     </div>
+
                     <div className="logo-bg">
                         <img className="logo-img" src="./logoicon.svg" alt="" />
                     </div>

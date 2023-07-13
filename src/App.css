@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 * {
     box-sizing: border-box;
+}
+
+html * {
+    font-family: "Inter", sans-serif;
 }
 
 h1,
@@ -36,6 +42,7 @@ h3 {
 }
 
 .project-contact {
+    position: relative;
     display: block;
     margin-top: 30px;
     width: 200px;

@@ -46,7 +46,7 @@ export default function AboutUs() {
             <div className="landing-page">
                 <div className="container">
                     <div className="row align-items-end">
-                        <div className="col-12 col-md-6 text-md-start">
+                        <div className="col-12 col-md-6 text-start p-4">
                             <h1>About Us</h1>
                             <p style={{ marginTop: "16px" }}>
                                 At DesignHIVE, we are not just designers and
@@ -57,7 +57,7 @@ export default function AboutUs() {
                                 products that redefine the digital landscape.
                             </p>
                             <Scroll to="contactus" offset={-50}>
-                                <button className="project-contact fw-bold mx-auto mx-sm-0">
+                                <button className="project-contact fw-bold mx-0">
                                     Contact Us
                                 </button>
                             </Scroll>

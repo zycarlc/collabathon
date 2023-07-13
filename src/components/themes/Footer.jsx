@@ -196,7 +196,7 @@ export default function Footer() {
                                 color: "#bfcc2b",
                                 textDecoration: "underline",
                             }}
-                            className="fw-bold fs-6"
+                            className="fs-6"
                         >
                             {pages.map(([name, route], i) => {
                                 if (name === "Contact Us") {
@@ -209,7 +209,7 @@ export default function Footer() {
                                                         padding: "10px",
                                                     }}
                                                 >
-                                                    <p className="navbar-button mx-1">
+                                                    <p className="navbar-button mx-1 fw-bold ">
                                                         {name}
                                                     </p>
                                                 </Button>
@@ -226,7 +226,7 @@ export default function Footer() {
                                                         padding: "10px",
                                                     }}
                                                 >
-                                                    <p className="navbar-button mx-1">
+                                                    <p className="navbar-button mx-1 fw-bold">
                                                         {name}
                                                     </p>
                                                 </Button>

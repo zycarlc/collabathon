@@ -17,7 +17,8 @@ export default function NavMenu({ setIsNavModalClose }) {
             style={{
                 backgroundColor: "white",
                 color: "black",
-                height: "100vh",
+                height: "70vh",
+                minHeight: "400px",
             }}
         >
             <div className="d-flex flex-column h-100 align-items-center justify-content-center">
@@ -28,7 +29,6 @@ export default function NavMenu({ setIsNavModalClose }) {
                         listStyle: "none",
                         textAlign: "center",
                         padding: "0",
-                        paddingTop: "30px",
                     }}
                 >
                     {pages.map(([name, route], i) => {
@@ -36,7 +36,7 @@ export default function NavMenu({ setIsNavModalClose }) {
                             <li key={i}>
                                 {name === "Services" ? (
                                     <div
-                                        className="fs-1 fw-bold py-4"
+                                        className="fs-1 fw-bold my-2"
                                         style={{
                                             cursor: "not-allowed",
                                             color: "grey",
@@ -47,7 +47,7 @@ export default function NavMenu({ setIsNavModalClose }) {
                                 ) : name === "Contact Us" ? (
                                     <Scroll to="contactus" offset={-50}>
                                         <div
-                                            className="fs-1 fw-bold py-4"
+                                            className="fs-1 fw-bold my-2"
                                             style={{
                                                 cursor: "pointer",
                                             }}
@@ -61,7 +61,7 @@ export default function NavMenu({ setIsNavModalClose }) {
                                 ) : (
                                     <Link to={route}>
                                         <div
-                                            className="fs-1 fw-bold py-4"
+                                            className="fs-1 fw-bold my-2"
                                             style={{
                                                 cursor: "pointer",
                                                 color:
@@ -81,7 +81,10 @@ export default function NavMenu({ setIsNavModalClose }) {
                         )
                     })}
                     <li>
-                        <button className="workwithus-bar fw-bold" disabled>
+                        <button
+                            className="workwithus-bar fw-bold my-2"
+                            disabled
+                        >
                             Work With Us
                         </button>
                     </li>
