@@ -1,20 +1,22 @@
-import Typography from "@mui/material/Typography"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
+import { Link as Scroll } from "react-scroll"
 
 export default function NavMenu({ setIsNavModalClose }) {
     const pages = [
         ["Home", "/"],
         ["Our Work", "/projects"],
         ["Services", "/"],
-        ["About Us", "/"],
+        ["About Us", "/aboutus"],
         ["Contact Us", "/"],
     ]
+
+    let location = useLocation()
 
     return (
         <div
             style={{
-                backgroundColor: "black",
-                color: "white",
+                backgroundColor: "white",
+                color: "black",
                 height: "100vh",
             }}
         >
@@ -31,26 +33,58 @@ export default function NavMenu({ setIsNavModalClose }) {
                 >
                     {pages.map(([name, route], i) => {
                         return (
-                            <li className="nav-item">
-                                <Link to={route}>
-                                    <Typography
-                                        className="nav-link"
+                            <li key={i}>
+                                {name === "Services" ? (
+                                    <div
+                                        className="fs-1 fw-bold py-4"
                                         style={{
-                                            cursor: "pointer",
-                                            color: "white",
-                                        }}
-                                        id={i}
-                                        to="home"
-                                        onClick={e => {
-                                            setIsNavModalClose(true)
+                                            cursor: "not-allowed",
+                                            color: "grey",
                                         }}
                                     >
                                         {name}
-                                    </Typography>
-                                </Link>
+                                    </div>
+                                ) : name === "Contact Us" ? (
+                                    <Scroll to="contactus" offset={-50}>
+                                        <div
+                                            className="fs-1 fw-bold py-4"
+                                            style={{
+                                                cursor: "pointer",
+                                            }}
+                                            onClick={e => {
+                                                setIsNavModalClose(true)
+                                            }}
+                                        >
+                                            {name}
+                                        </div>
+                                    </Scroll>
+                                ) : (
+                                    <Link to={route}>
+                                        <div
+                                            className="fs-1 fw-bold py-4"
+                                            style={{
+                                                cursor: "pointer",
+                                                color:
+                                                    location.pathname === route
+                                                        ? "#7B61FF"
+                                                        : "black",
+                                            }}
+                                            onClick={e => {
+                                                setIsNavModalClose(true)
+                                            }}
+                                        >
+                                            {name}
+                                        </div>
+                                    </Link>
+                                )}
                             </li>
                         )
                     })}
+                    <li>
+                        <button className="workwithus-bar fw-bold" disabled>
+                            Work With Us
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>

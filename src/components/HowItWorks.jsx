@@ -1,9 +1,31 @@
 import { Box } from "@mui/material"
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 import Slider from "react-slick"
 
 export default function HowItWorks() {
+    // set width
+
+    const [slidesToShow, setSlidesToShow] = useState(1.5)
+
+    function handleWindowSizeChange() {
+        if (window.innerWidth < 390) {
+            setSlidesToShow(1.5)
+        } else if (window.innerWidth < 1000) {
+            let slides = (window.innerWidth - 390) / 244
+            setSlidesToShow(1.5 + slides)
+        } else {
+            setSlidesToShow(4)
+        }
+    }
+    useEffect(() => {
+        window.addEventListener("resize", handleWindowSizeChange)
+        handleWindowSizeChange()
+        return () => {
+            window.removeEventListener("resize", handleWindowSizeChange)
+        }
+    }, [])
+
     const reviews = [
         {
             name: "1. Onboarding",
@@ -67,7 +89,7 @@ export default function HowItWorks() {
         nextArrow: <SlickArrowRight />,
         infinite: false,
         speed: 500,
-        slidesToShow: 1.5,
+        slidesToShow: slidesToShow,
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 4500,
@@ -78,100 +100,54 @@ export default function HowItWorks() {
         <section className="section how-it-works">
             <Box
                 sx={{
-                    display: { xs: "block", md: "none" },
+                    display: { xs: "block", md: "block" },
                     minHeight: "650px",
                 }}
             >
-                <div className="container">
-                    {/* Heading */}
-                    <h2 className="text-10 fw-600 text-white mb-5 pt-5">
-                        How it works
-                    </h2>
-                    {/* Heading end*/}
-                    <div className="row">
-                        <div className="col-lg-9 mx-auto">
-                            <Slider {...settings}>
-                                {reviews.length > 0 &&
-                                    reviews.map((review, index) => (
-                                        <div
-                                            className="col-3 mx-auto mb-5"
-                                            key={index}
-                                        >
-                                            <div className="item px-2">
-                                                <div
-                                                    style={{
-                                                        backgroundColor:
-                                                            review.bgc,
-                                                        borderRadius: "30px",
-                                                        height: "200px",
-                                                        width: "200px",
-                                                    }}
-                                                    className="p-4 text-center mb-5"
-                                                >
-                                                    <img
-                                                        className="d-inline-block"
-                                                        src={review.src}
-                                                        alt={review.name}
-                                                    />
-                                                </div>
+                <h2 className="text-10 fw-600 text-white mb-5 pt-5 px-5">
+                    How it works
+                </h2>
+                {/* Heading end*/}
 
-                                                <strong className="d-block text-3 fw-600 text-white mb-3">
-                                                    {review.name}
-                                                </strong>
-                                                <p className="text-5 text-white fw-light">
-                                                    {review.desc}
-                                                </p>
+                <div className="p-4">
+                    <div className="mx-auto">
+                        <Slider {...settings}>
+                            {reviews.length > 0 &&
+                                reviews.map((review, index) => (
+                                    <div
+                                        className="col-3 mx-auto mb-5"
+                                        key={index}
+                                    >
+                                        <div className="item px-2">
+                                            <div
+                                                style={{
+                                                    backgroundColor: review.bgc,
+                                                    borderRadius: "30px",
+                                                    height: "200px",
+                                                    width: "200px",
+                                                }}
+                                                className="p-4 text-center mb-5"
+                                            >
+                                                <img
+                                                    className="d-inline-block img-fluid"
+                                                    src={review.src}
+                                                    alt={review.name}
+                                                />
                                             </div>
-                                        </div>
-                                    ))}
-                            </Slider>
-                        </div>
-                    </div>
-                </div>
-            </Box>
-            <Box
-                sx={{
-                    display: { xs: "none", md: "block" },
-                }}
-            >
-                <div className="container">
-                    {/* Heading */}
-                    <h2 className="text-10 fw-600 text-white mb-5 pt-5">
-                        How it works
-                    </h2>
-                    {/* Heading end*/}
-                    <div className="row">
-                        {reviews.length > 0 &&
-                            reviews.map((review, index) => (
-                                <div className="col-3 mx-auto mb-5" key={index}>
-                                    <div className="item px-2">
-                                        <div
-                                            style={{
-                                                backgroundColor: review.bgc,
-                                                borderRadius: "30px",
-                                                height: "200px",
-                                                width: "200px",
-                                            }}
-                                            className="p-4 text-center mb-5"
-                                        >
-                                            <img
-                                                className="d-inline-block"
-                                                src={review.src}
-                                                alt={review.name}
-                                            />
-                                        </div>
 
-                                        <strong className="d-block text-3 fw-600 text-white mb-3">
-                                            {review.name}
-                                        </strong>
-                                        <p className="text-5 text-white fw-light">
-                                            {review.desc}
-                                        </p>
+                                            <strong className="d-block text-3 fw-600 text-white mb-3">
+                                                {review.name}
+                                            </strong>
+                                            <p className="text-5 text-white fw-light">
+                                                {review.desc}
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                        </Slider>
                     </div>
                 </div>
+                {/* Heading */}
             </Box>
         </section>
     )

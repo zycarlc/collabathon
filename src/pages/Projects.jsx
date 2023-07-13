@@ -1,5 +1,7 @@
 import Isotope from "isotope-layout"
 import { useEffect, useRef, useState } from "react"
+import Contact from "../components/Contact"
+import { Link as Scroll } from "react-scroll"
 
 export default function Projects() {
     const filters = {
@@ -151,17 +153,35 @@ export default function Projects() {
         }
     }, [filterKey, imagesLoaded])
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div>
             <div className="landing-page">
-                <h1>Our Work</h1>
-                <p>
-                    We've collaborated with amazing clients across different
-                    industries. Explore our hive of transformative branding,
-                    product development, and design solutions. Get in touch and
-                    let’s create something extraordinary together.
-                </p>
-                <button className="workwithus fw-bold">Contact Us</button>
+                <div className="container">
+                    <div className="row align-items-end">
+                        <div className="col-12 col-md-6 text-md-start">
+                            <h1>Our Work</h1>
+                            <p style={{ marginTop: "16px" }}>
+                                We've collaborated with amazing clients across
+                                different industries. Explore our hive of
+                                transformative branding, product development,
+                                and design solutions. Get in touch and let’s
+                                create something extraordinary together.
+                            </p>
+                            <Scroll to="contactus" offset={-50}>
+                                <button className="project-contact fw-bold mx-auto mx-sm-0">
+                                    Contact Us
+                                </button>
+                            </Scroll>
+                        </div>
+                    </div>
+                    <div className="logo-bg">
+                        <img className="logo-img" src="./logoicon.svg" alt="" />
+                    </div>
+                </div>
             </div>
             {/* Filter Menu */}
             <ul
@@ -243,6 +263,9 @@ export default function Projects() {
                             </div>
                         ))}
                 </div>
+            </div>
+            <div className="mt-5">
+                <Contact></Contact>
             </div>
         </div>
     )
