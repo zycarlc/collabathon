@@ -85,7 +85,7 @@ export default function Contact() {
                             </label>
                             <input
                                 id="name"
-                                name="user_name"
+                                name="name"
                                 type="text"
                                 className="form-control py-1 enquire-box"
                                 placeholder="First and Last Name"
@@ -102,7 +102,7 @@ export default function Contact() {
                             </label>
                             <input
                                 id="email"
-                                name="user_email"
+                                name="email"
                                 type="email"
                                 className="form-control py-1 enquire-box"
                                 placeholder="Email Address"
@@ -133,7 +133,7 @@ export default function Contact() {
                                 className="contact fw-bold"
                                 type="submit"
                             >
-                                {sendingMail ? <>sending...</> : <>Submit</>}
+                                {sendingMail ? <>Sending...</> : <>Submit</>}
                             </button>
                         </div>
                     </div>
@@ -182,7 +182,7 @@ export default function Contact() {
                                         </label>
                                         <input
                                             id="name"
-                                            name="user_name"
+                                            name="name"
                                             type="text"
                                             className="form-control py-1 enquire-box"
                                             placeholder="First and Last Name"
@@ -199,7 +199,7 @@ export default function Contact() {
                                         </label>
                                         <input
                                             id="email"
-                                            name="user_email"
+                                            name="email"
                                             type="email"
                                             className="form-control py-1 enquire-box"
                                             placeholder="Email Address"
@@ -231,7 +231,7 @@ export default function Contact() {
                                             type="submit"
                                         >
                                             {sendingMail ? (
-                                                <>sending...</>
+                                                <>Sending...</>
                                             ) : (
                                                 <>Submit</>
                                             )}
