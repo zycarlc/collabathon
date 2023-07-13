@@ -69,6 +69,7 @@ export default function Contact() {
                     id="contact-form"
                     className="form-border contact p-5 d-flex flex-column flex-sm-row"
                     method="post"
+                    name="contact"
                     data-netlify="true"
                     onSubmit={sendEmail}
                 >
