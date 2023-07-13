@@ -13,6 +13,7 @@ export default function Contact() {
         const myForm = e.target
         const formData = new FormData(myForm)
         const messageData = new URLSearchParams(formData).toString()
+        console.log(messageData)
 
         fetch("/", {
             method: "POST",
@@ -73,6 +74,7 @@ export default function Contact() {
                     data-netlify="true"
                     onSubmit={sendEmail}
                 >
+                    <input type="hidden" name="form-name" value="contact" />
                     <p className="fs-1 text-light fw-bold flex-shrink-1">
                         Enquire Now!
                     </p>
@@ -157,8 +159,15 @@ export default function Contact() {
                             <form
                                 id="contact-form"
                                 className="contact-form"
+                                name="contact"
                                 method="post"
+                                onSubmit={sendEmail}
                             >
+                                <input
+                                    type="hidden"
+                                    name="form-name"
+                                    value="contact"
+                                />
                                 <p className="fs-1 text-light fw-bold">
                                     Enquire Now!
                                 </p>
