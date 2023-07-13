@@ -8,6 +8,7 @@ export default function Contact() {
                     id="contact-form"
                     className="form-border contact p-5 d-flex flex-column flex-sm-row"
                     method="post"
+                    data-netlify="true"
                 >
                     <p className="fs-1 text-light fw-bold flex-shrink-1">
                         Enquire Now!
