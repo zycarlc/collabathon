@@ -13,7 +13,6 @@ export default function Contact() {
         const myForm = e.target
         const formData = new FormData(myForm)
         const messageData = new URLSearchParams(formData).toString()
-        console.log(messageData)
 
         fetch("/", {
             method: "POST",
