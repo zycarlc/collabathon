@@ -9,7 +9,9 @@ export default function Result() {
                 }}
             >
                 <div className="result">
-                    <h2>Need to bring a product to life?</h2>
+                    <p className="fs-1 fw-bold">
+                        Need to bring a product to life?
+                    </p>
                     <h6 style={{ margin: "20px 0" }}>
                         We can help. Our all-inclusive and strategic approach
                         help businesses grow. Businesses that embrace our design
@@ -26,7 +28,7 @@ export default function Result() {
                             <div className="number">
                                 <h2 style={{ fontSize: "50px" }}>56%</h2>
                                 <p style={{ fontSize: "12px" }}>
-                                    shareholder 'return
+                                    shareholder return
                                 </p>
                             </div>
                         </div>
@@ -46,7 +48,9 @@ export default function Result() {
                         sx={{ padding: 0, paddingBottom: 0, minWidth: "400px" }}
                     >
                         <div className="result">
-                            <h2>Need to bring a product to life?</h2>
+                            <p className="fs-2">
+                                Need to bring a product to life?
+                            </p>
                             <h6 style={{ margin: "20px 0" }}>
                                 We can help. Our all-inclusive and strategic
                                 approach help businesses grow. Businesses that
@@ -69,7 +73,7 @@ export default function Result() {
                                             56%
                                         </h2>
                                         <p style={{ fontSize: "12px" }}>
-                                            shareholder 'return
+                                            shareholder return
                                         </p>
                                     </div>
                                 </div>

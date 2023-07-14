@@ -31,7 +31,9 @@ function ResponsiveAppBar() {
     return (
         <AppBar
             position="fixed"
-            style={{ backgroundColor: anchorElNav ? "white" : "black" }}
+            style={{
+                backgroundColor: anchorElNav ? "white" : "black",
+            }}
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
@@ -311,6 +313,7 @@ function ResponsiveAppBar() {
                                                 my: 2,
                                                 color: "#bfcc2b",
                                                 padding: "10px",
+                                                textTransform: "capitalize",
                                             }}
                                         >
                                             <p className="navbar-button mx-1">
@@ -328,6 +331,7 @@ function ResponsiveAppBar() {
                                                 my: 2,
                                                 color: "#bfcc2b",
                                                 padding: "10px",
+                                                textTransform: "capitalize",
                                             }}
                                         >
                                             <p className="navbar-button mx-1">

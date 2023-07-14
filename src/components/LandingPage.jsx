@@ -3,8 +3,10 @@ import { Link as Scroll } from "react-scroll"
 export default function LandingPage() {
     return (
         <div className="landing-page">
-            <div className="landing-page-content">
-                <h1>Crafting sweet, purposeful digital experiences</h1>
+            <div className="landing-page-content p-3">
+                <p className="fs-1 fw-bold">
+                    Crafting sweet, purposeful digital experiences
+                </p>
                 <p style={{ marginTop: "16px" }}>
                     Crafting purposeful designs that buzz with creativity,
                     elevating your online presence with captivating digital

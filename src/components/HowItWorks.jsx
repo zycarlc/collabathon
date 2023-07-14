@@ -104,9 +104,9 @@ export default function HowItWorks() {
                     minHeight: "650px",
                 }}
             >
-                <h2 className="text-10 fw-600 text-white mb-5 pt-5 px-5">
+                <p className="fs-1 fw-bold text-white mb-5 pt-5 px-5">
                     How it works
-                </h2>
+                </p>
                 {/* Heading end*/}
 
                 <div className="p-4">
