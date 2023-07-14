@@ -5,7 +5,6 @@ export default function NavMenu({ setIsNavModalClose }) {
     const pages = [
         ["Home", "/"],
         ["Our Work", "/projects"],
-        ["Services", "/"],
         ["About Us", "/aboutus"],
         ["Contact Us", "/"],
     ]

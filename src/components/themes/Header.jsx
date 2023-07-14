@@ -181,7 +181,7 @@ function ResponsiveAppBar() {
                     <Box
                         variant="h5"
                         component="a"
-                        href=""
+                        href="/"
                         sx={{
                             mr: 2,
                             display: { xs: "flex", md: "none" },
