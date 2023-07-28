@@ -28,7 +28,7 @@ export default function Result() {
                             <div className="number">
                                 <h2 style={{ fontSize: "50px" }}>56%</h2>
                                 <p style={{ fontSize: "12px" }}>
-                                    shareholder return
+                                    total shareholder return
                                 </p>
                             </div>
                         </div>
@@ -73,7 +73,7 @@ export default function Result() {
                                             56%
                                         </h2>
                                         <p style={{ fontSize: "12px" }}>
-                                            shareholder return
+                                            total shareholder return
                                         </p>
                                     </div>
                                 </div>

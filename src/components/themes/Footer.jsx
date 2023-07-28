@@ -207,6 +207,8 @@ export default function Footer() {
                                                     sx={{
                                                         color: "#bfcc2b",
                                                         padding: "10px",
+                                                        textTransform:
+                                                            "lowercase",
                                                     }}
                                                 >
                                                     <p className="navbar-button mx-1 fw-bold ">
@@ -224,6 +226,8 @@ export default function Footer() {
                                                     sx={{
                                                         color: "#bfcc2b",
                                                         padding: "10px",
+                                                        textTransform:
+                                                            "lowercase",
                                                     }}
                                                 >
                                                     <p className="navbar-button mx-1 fw-bold">

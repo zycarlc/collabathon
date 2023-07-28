@@ -8,15 +8,17 @@ import Container from "@mui/material/Container"
 import Button from "@mui/material/Button"
 import CloseIcon from "@mui/icons-material/Close"
 import NavMenu from "./NavMenu"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { Link as Scroll } from "react-scroll"
 
 function ResponsiveAppBar() {
     const pages = [
-        ["About Us", "/aboutus"],
-        ["Our Projects", "/projects"],
-        ["Contact Us", "contactus"],
+        ["about Us", "/aboutus"],
+        ["our projects", "/projects"],
+        ["contact us", "contactus"],
     ]
+
+    let location = useLocation()
 
     const [anchorElNav, setAnchorElNav] = React.useState(null)
 
@@ -313,7 +315,7 @@ function ResponsiveAppBar() {
                                                 my: 2,
                                                 color: "#bfcc2b",
                                                 padding: "10px",
-                                                textTransform: "capitalize",
+                                                textTransform: "lowercase",
                                             }}
                                         >
                                             <p className="navbar-button mx-1">
@@ -329,9 +331,12 @@ function ResponsiveAppBar() {
                                             onClick={handleCloseNavMenu}
                                             sx={{
                                                 my: 2,
-                                                color: "#bfcc2b",
+                                                color:
+                                                    location.pathname === route
+                                                        ? "#7b61ff"
+                                                        : "#bfcc2b",
                                                 padding: "10px",
-                                                textTransform: "capitalize",
+                                                textTransform: "lowercase",
                                             }}
                                         >
                                             <p className="navbar-button mx-1">
