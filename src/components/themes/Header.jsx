@@ -306,7 +306,7 @@ function ResponsiveAppBar() {
                         }}
                     >
                         {pages.map(([name, route]) => {
-                            if (name === "Contact Us") {
+                            if (name === "contact us") {
                                 return (
                                     <Scroll to={route} key={name} offset={-50}>
                                         <Button
