@@ -208,7 +208,7 @@ export default function Footer() {
                                                         color: "#bfcc2b",
                                                         padding: "10px",
                                                         textTransform:
-                                                            "lowercase",
+                                                            "capitalize",
                                                     }}
                                                 >
                                                     <p className="navbar-button mx-1 fw-bold ">
@@ -227,7 +227,7 @@ export default function Footer() {
                                                         color: "#bfcc2b",
                                                         padding: "10px",
                                                         textTransform:
-                                                            "lowercase",
+                                                            "capitalize",
                                                     }}
                                                 >
                                                     <p className="navbar-button mx-1 fw-bold">
