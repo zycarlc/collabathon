@@ -315,7 +315,7 @@ function ResponsiveAppBar() {
                                                 my: 2,
                                                 color: "#bfcc2b",
                                                 padding: "10px",
-                                                textTransform: "lowercase",
+                                                textTransform: "capitalize",
                                             }}
                                         >
                                             <p className="navbar-button mx-1">
@@ -336,7 +336,7 @@ function ResponsiveAppBar() {
                                                         ? "#7b61ff"
                                                         : "#bfcc2b",
                                                 padding: "10px",
-                                                textTransform: "lowercase",
+                                                textTransform: "capitalize",
                                             }}
                                         >
                                             <p className="navbar-button mx-1">
